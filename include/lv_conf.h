@@ -694,7 +694,7 @@
  *============================================================================*/
 
 /** Logging */
-#define LV_USE_LOG 1
+#define LV_USE_LOG 0
 
 #if LV_USE_LOG
 /** Default log verbosity

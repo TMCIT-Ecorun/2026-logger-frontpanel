@@ -18,13 +18,28 @@ add_executable(ecorun_front_panel
     src/main.c
     src/display_ili9341.c
     src/touch_xpt2046.c
+    src/command.c
+    src/ui.c
 )
 
 set(LV_BUILD_CONF_PATH "${CMAKE_CURRENT_SOURCE_DIR}/include/lv_conf.h" CACHE PATH "" FORCE)
 add_compile_definitions(LV_CONF_PATH="${CMAKE_CURRENT_SOURCE_DIR}/include/lv_conf.h")
 
+include(FetchContent)
+set(ENABLE_CJSON_TEST OFF CACHE BOOL "" FORCE)
+set(ENABLE_CJSON_UTILS OFF CACHE BOOL "" FORCE)
+set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
+
+FetchContent_Declare(
+    cjson
+    GIT_REPOSITORY https://github.com/DaveGamble/cJSON.git
+    GIT_TAG        v1.7.18
+)
+FetchContent_MakeAvailable(cjson)
+
 target_include_directories(ecorun_front_panel PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/include
+    ${cjson_SOURCE_DIR}
 )
 
 target_compile_options(ecorun_front_panel PRIVATE
@@ -38,14 +53,17 @@ target_link_options(ecorun_front_panel PRIVATE
 
 add_subdirectory(lvgl)
 
-pico_enable_stdio_usb(ecorun_front_panel 1)
-pico_enable_stdio_uart(ecorun_front_panel 0)
+pico_enable_stdio_usb(ecorun_front_panel 0)
+pico_enable_stdio_uart(ecorun_front_panel 1)
 
 target_link_libraries(ecorun_front_panel
     pico_stdlib
+    cjson
     hardware_spi
     hardware_gpio
     hardware_timer
+    tinyusb_host
+    tinyusb_board
     lvgl
 )
 
