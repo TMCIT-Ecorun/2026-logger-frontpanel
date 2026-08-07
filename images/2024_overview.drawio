@@ -1,0 +1,88 @@
+<mxfile host="Electron">
+  <diagram name="ページ-1" id="HAMfaBpUu77HEvUgn9N_">
+    <mxGraphModel dx="643" dy="402" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4Bka57kd9efrEjX2Razy-3" edge="1" parent="1" source="4Bka57kd9efrEjX2Razy-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=classic;startFill=1;" target="4Bka57kd9efrEjX2Razy-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-4" connectable="0" parent="4Bka57kd9efrEjX2Razy-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" value="SPI x 2" vertex="1">
+          <mxGeometry relative="1" x="-0.0714" y="1" as="geometry">
+            <mxPoint y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;fontColor=#000000;labelBorderColor=none;" value="Display &amp;amp; Touch panel" vertex="1">
+          <mxGeometry height="160" width="240" x="560" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;fillColor=none;strokeWidth=3;" value="Raspberrypi&lt;div&gt;pico W&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="80" x="840" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-6" edge="1" parent="1" source="4Bka57kd9efrEjX2Razy-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=classic;startFill=1;" target="4Bka57kd9efrEjX2Razy-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-7" connectable="0" parent="4Bka57kd9efrEjX2Razy-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" value="Wifi" vertex="1">
+          <mxGeometry relative="1" x="-0.0042" y="-2" as="geometry">
+            <mxPoint x="18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-5" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" value="" vertex="1">
+          <mxGeometry height="130" width="60" x="850" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-8" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=1;size=20;indent=5;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;SDCard&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="60" x="650" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-9" edge="1" parent="1" source="4Bka57kd9efrEjX2Razy-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=classic;startFill=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="841" y="505" />
+            </Array>
+            <mxPoint x="841" y="505" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-10" connectable="0" parent="4Bka57kd9efrEjX2Razy-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" value="SPI" vertex="1">
+          <mxGeometry relative="1" x="0.6393" as="geometry">
+            <mxPoint x="3" y="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-12" edge="1" parent="1" source="4Bka57kd9efrEjX2Razy-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;strokeColor=#000000;" target="4Bka57kd9efrEjX2Razy-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-13" connectable="0" parent="4Bka57kd9efrEjX2Razy-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" value="SPI" vertex="1">
+          <mxGeometry relative="1" x="-0.2263" as="geometry">
+            <mxPoint x="5" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-11" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#000000;fillColor=none;fontColor=#000000;strokeWidth=3;" value="Gyro Sensor" vertex="1">
+          <mxGeometry height="80" width="80" x="960" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=3;fillColor=none;fontColor=#000000;" value="Other devices&lt;div&gt;(Car control)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="960" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-15" edge="1" parent="1" source="4Bka57kd9efrEjX2Razy-2" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.125;exitDx=0;exitDy=0;exitPerimeter=0;fontColor=#000000;labelBackgroundColor=none;strokeColor=#000000;startArrow=classic;startFill=1;endFill=1;" target="4Bka57kd9efrEjX2Razy-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1020" y="500" as="sourcePoint" />
+            <mxPoint x="1070" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-16" connectable="0" parent="4Bka57kd9efrEjX2Razy-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" value="UART" vertex="1">
+          <mxGeometry relative="1" x="-0.1737" y="1" as="geometry">
+            <mxPoint x="4" y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-18" edge="1" parent="1" source="4Bka57kd9efrEjX2Razy-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;startArrow=none;startFill=0;" target="4Bka57kd9efrEjX2Razy-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;fontColor=#000000;" value="5V Input" vertex="1">
+          <mxGeometry height="40" width="40" x="840" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-20" edge="1" parent="1" source="4Bka57kd9efrEjX2Razy-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;" target="4Bka57kd9efrEjX2Razy-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4Bka57kd9efrEjX2Razy-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Mobile battery" vertex="1">
+          <mxGeometry height="40" width="120" x="560" y="280" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
