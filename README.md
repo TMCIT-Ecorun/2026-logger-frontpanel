@@ -13,6 +13,7 @@ This system is using since 2024. Old version is available at [this repository](h
 ```bash
 git clone https://github.com/TMCIT-Ecorun/2026-logger-frontpanel.git
 cd 2026-logger-frontpanel
+git submodule update --init --recursive
 ```
 
 ### Build
