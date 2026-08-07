@@ -25,8 +25,8 @@ add_compile_definitions(LV_CONF_PATH="${CMAKE_CURRENT_SOURCE_DIR}/include/lv_con
 
 add_subdirectory(lvgl)
 
-#pico_enable_stdio_usb(ecorun_front_panel 1)
-#pico_enable_stdio_uart(ecorun_front_panel 0)
+pico_enable_stdio_usb(ecorun_front_panel 1)
+pico_enable_stdio_uart(ecorun_front_panel 0)
 
 target_link_libraries(ecorun_front_panel
     pico_stdlib
