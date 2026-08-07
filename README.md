@@ -19,7 +19,7 @@ cd 2026-logger-frontpanel
 ```bash
 mkdir build && cd build
 cmake ..
-make
+make -j4
 ```
 The uf2 file for installing this on Raspberry pi pico will be generated on root of "build" directory.
 
