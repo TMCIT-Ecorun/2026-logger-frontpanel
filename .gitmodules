@@ -4,3 +4,6 @@
 [submodule "lvgl"]
 	path = lvgl
 	url = https://github.com/lvgl/lvgl.git
+[submodule "pico-map"]
+	path = pico-map
+	url = https://github.com/zsdotkr/pico-map

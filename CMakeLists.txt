@@ -8,6 +8,10 @@ project(ecorun_front_panel C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose Release or MinSizeRel" FORCE)
+endif()
+
 pico_sdk_init()
 
 add_executable(ecorun_front_panel
@@ -17,11 +21,20 @@ add_executable(ecorun_front_panel
 )
 
 set(LV_BUILD_CONF_PATH "${CMAKE_CURRENT_SOURCE_DIR}/include/lv_conf.h" CACHE PATH "" FORCE)
+add_compile_definitions(LV_CONF_PATH="${CMAKE_CURRENT_SOURCE_DIR}/include/lv_conf.h")
 
 target_include_directories(ecorun_front_panel PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/include
 )
-add_compile_definitions(LV_CONF_PATH="${CMAKE_CURRENT_SOURCE_DIR}/include/lv_conf.h")
+
+target_compile_options(ecorun_front_panel PRIVATE
+    -ffunction-sections
+    -fdata-sections
+)
+
+target_link_options(ecorun_front_panel PRIVATE
+    -Wl,--gc-sections
+)
 
 add_subdirectory(lvgl)
 
@@ -37,3 +50,8 @@ target_link_libraries(ecorun_front_panel
 )
 
 pico_add_extra_outputs(ecorun_front_panel)
+
+add_custom_command(TARGET ecorun_front_panel POST_BUILD
+    COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/pico-map/pico-map.py $<TARGET_FILE:ecorun_front_panel>.map
+    COMMENT "Analyzing memory map with pico-map..."
+)
