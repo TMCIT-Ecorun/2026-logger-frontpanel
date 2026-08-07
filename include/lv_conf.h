@@ -12,7 +12,7 @@
  */
 
 /* clang-format off */
-#if 0 /* Set this to "1" to enable content */
+#if 1 /* Set this to "1" to enable content */
 
 #ifndef LV_CONF_H
 #define LV_CONF_H
@@ -56,7 +56,7 @@
 
 #if LV_USE_STDLIB_MALLOC == LV_STDLIB_BUILTIN
 /** Size of the pool `lv_malloc()` allocates from. Needs to be at least 2kB (2048). */
-#define LV_MEM_SIZE 65536
+#define LV_MEM_SIZE (48 * 1024U)
 
 /** Place the pool at a fixed address instead of allocating it as a normal array.
  *  0: unused.
@@ -694,7 +694,7 @@
  *============================================================================*/
 
 /** Logging */
-#define LV_USE_LOG 0
+#define LV_USE_LOG 1
 
 #if LV_USE_LOG
 /** Default log verbosity
@@ -709,7 +709,7 @@
 #define LV_LOG_LEVEL LV_LOG_LEVEL_WARN
 
 /** If not set, the user needs to register a callback with lv_log_register_print_cb(). */
-#define LV_LOG_PRINTF 0
+#define LV_LOG_PRINTF 1
 
 /** Add a timestamp to each log */
 #define LV_LOG_USE_TIMESTAMP 1
@@ -2421,7 +2421,7 @@
  *============================================================================*/
 
 /** Build examples */
-#define LV_BUILD_EXAMPLES 1
+#define LV_BUILD_EXAMPLES 0
 
 
 
@@ -2430,7 +2430,7 @@
  *============================================================================*/
 
 /** Build demos */
-#define LV_BUILD_DEMOS 1
+#define LV_BUILD_DEMOS 0
 
 #if LV_BUILD_DEMOS
 /** Benchmark demo
