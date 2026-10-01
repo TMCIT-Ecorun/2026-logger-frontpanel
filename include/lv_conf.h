@@ -1699,7 +1699,11 @@
 #endif /*LV_USE_QNX*/
 
 /** Open a window on a PC desktop with SDL2 and read mouse and keyboard input. */
+#if defined(FRONTPANEL_PC)
+#define LV_USE_SDL 1
+#else
 #define LV_USE_SDL 0
+#endif
 
 #if LV_USE_SDL
 /** SDL include path */

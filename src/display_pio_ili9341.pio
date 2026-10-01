@@ -1,0 +1,12 @@
+; ILI9341 transmit-only SPI engine, SPI mode 0.
+; One PIO instruction drives MOSI while SCK is low, followed by one
+; instruction that raises SCK.  With a 16-bit TX shift register this is used
+; for both command/data bytes and the DMA-driven RGB565 pixel stream.
+
+.program ili9341_tx
+.side_set 1
+
+.wrap_target
+    out pins, 1 side 0
+    nop        side 1
+.wrap

@@ -1,0 +1,14 @@
+; XPT2046 SPI mode 0, 8-bit command followed by 16 response clocks.
+; The touch controller shares SCK/MOSI with the ILI9341: SCK=GPIO10,
+; MOSI=GPIO11, MISO=GPIO8.
+; CS is driven by the CPU on GPIO5 so a timed-out transaction can always
+; release the controller without waiting for the PIO state machine.
+.program xpt2046_spi
+.side_set 1
+.wrap_target
+    pull block side 0
+    set x, 23 side 0
+    out pins, 1 side 0
+    in pins, 1 side 1
+    jmp x-- 2 side 0
+.wrap
